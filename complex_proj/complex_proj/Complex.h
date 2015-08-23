@@ -16,13 +16,15 @@ public:
 
     std::string ToString();
 
-    Complex operator+(Complex p_complex);
+    Complex operator+(Complex& p_complex);
 
-    Complex operator-(Complex p_complex);
+    Complex operator-(Complex& p_complex);
 
-    Complex operator*(Complex p_complex);
+    Complex operator*(Complex& p_complex);
 
-    Complex operator/(Complex p_complex);
+    Complex operator/(Complex& p_complex);
+
+    bool operator=(Complex& p_complex);
 
     ~Complex();
 
