@@ -36,21 +36,21 @@ Complex::ToString()
 }
 
 Complex
-Complex::operator+(Complex& p_complex)
+Complex::operator+(Complex& p_complex) const
 {
     return Complex(m_real + p_complex.GetReal(),
                    m_imaginary + p_complex.GetImaginary());
 }
 
 Complex
-Complex::operator-(Complex& p_complex)
+Complex::operator-(Complex& p_complex) const
 {
     return Complex(m_real - p_complex.GetReal(),
                    m_imaginary - p_complex.GetImaginary());
 }
 
 Complex
-Complex::operator*(Complex& p_complex)
+Complex::operator*(Complex& p_complex) const
 {
     double real = m_real * p_complex.GetReal() - m_imaginary * p_complex.GetImaginary();
     double imaginary = m_imaginary * p_complex.GetReal() + m_real * p_complex.GetImaginary();
@@ -58,7 +58,7 @@ Complex::operator*(Complex& p_complex)
 }
 
 Complex
-Complex::operator/(Complex& p_complex)
+Complex::operator/(Complex& p_complex) const
 {
     double real = (m_real * p_complex.GetReal() + m_imaginary * p_complex.GetImaginary())
         / (p_complex.GetReal() * p_complex.GetReal() + p_complex.GetImaginary() * p_complex.GetImaginary());
@@ -68,7 +68,7 @@ Complex::operator/(Complex& p_complex)
 }
 
 bool
-Complex::operator=(Complex& p_complex)
+Complex::operator=(Complex& p_complex) const
 {
     return m_real == p_complex.GetReal() && m_imaginary == p_complex.GetImaginary();
 }
